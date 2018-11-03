@@ -1,0 +1,36 @@
+a.page-title {
+    font-size: 36px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.chip {
+    color: white;
+    height: 1.5em;
+    line-height: 150%;
+}
+
+.abstract-item {
+    margin-bottom: 30px;
+}
+
+button.abstract {
+    margin: 5px;
+}
+
+#map{
+    height: 70%;
+    width: 40;
+    margin-bottom: 50px;
+    border: 2px;
+    border-color: black;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,150 @@
+.body{
+    margin:0;
+    padding:0;
+}
+
+.header{
+    height:100vh;
+    background-size:cover;
+    background-position: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color:rgb(1, 0, 5);
+    margin-bottom: 70px;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+span{
+    color:#000000;
+}
+
+.search-field{
+    height: 50px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.skills{
+    width:400px;
+}
+
+.location {
+    width: 200px;
+}
+
+.search-btn{
+    height: 50px;  
+    width: 150px;
+    background: #0c0504;
+    border: none;
+    color:#fff;
+}
+
+.search-btn:hover{
+    background: #0c0504;
+    cursor: pointer;
+}
+
+.form-box{
+    background:rgba(131, 125, 125, 0.5);
+    padding:30px 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-right: 200px;
+    margin-left: 200px;   
+}
+
+.menu-display{
+    background:rgba(131, 125, 125, 0.5);
+    padding:30px 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 50px;
+    display:none;
+}
+
+#header{
+    position: relative;
+    top: -200px;
+}
+
+.navbar{
+    color:#2F4454
+}
+
+.container{
+    width:100%;
+    height:500px;
+    position:relative;
+}
+
+.slide{
+    z-index:1;
+    position: absolute;
+    width:100%;
+    top:0;
+    left:0;
+    height:100%;
+    transition:opacity 1s ease-in-out;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    opacity:0;
+
+    &.show{
+        opacity:1;
+      }
+}
+
+#map{
+    color:blue;
+    padding:30px 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.topRow{
+    color: white;
+}
+
+#addFav{
+    margin-bottom: 10px;
+}
+.restName{
+    color:#DA7B93
+}
+.content{
+    background:rgba(47, 68, 84);
+}
+.restAddress{
+    color:#DA7B93
+}
+.h3{
+    color:#DA7B93
+}
+.menu-display{
+    background:rgba(46, 21, 27);
+}
+h4{
+color:#DA7B93
+}
+.btn.waves-effect{
+    color:#DA7B93
+}
+.button{
+    color:#2F4454
+}
+.abstract{
+    background-color:#2E151B
+}

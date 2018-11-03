@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Link to reset CSS file -->
+        <link rel="stylesheet" type="text/css" href="asset/css/reset.css">
+        <link rel="stylesheet" href="asset/css/style.css">
+        <link rel="stylesheet" href="asset/css/project1.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script> -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <title>Favorite Food</title>
+    </head>
+
+    <body>
+
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./favorites.html">My Favorite Food Places</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./project1.html">Search for Places</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav class="navbar" style="background-color: #2F4454">
+                <div class="col-sm-9"></div>
+                <a href="./project1.html"> 
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>Home
+                    </button>
+                </a>
+            </nav>
+        </div>
+
+        <header>
+            <nav class="top-nav" style="background-color: #2F4454">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a class="page-title">Favorite fastfood joints!</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="container">
+            <!-- <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
+            <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+
+            <div class="row">
+                <div id='buttonGroup'>hweasfhjkadhf</div>
+            </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <!-- <i class="material-icons prefix">http</i> -->
+                            <i class="material-icons prefix"></i>
+                            <input placeholder="Click one of the tabs or Type a restaurant name here and click Submit" id="addRestaurant" class="first_name2">                                
+                            <!-- <label for="icon_prefix2"></label> -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <button id="sendGet" class="btn waves-effect waves-light blue-grey darken-2" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                    <button id="deleteBtn" type="button" class="btn delete-fav waves-effect waves-light blue-grey darken-2">Delete Favorites</button>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+
+        <!------------- Script to display the Map originally when favorite pages is loaded ----------------->
+
+        <script>
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 40.7128, lng: -74.0060},
+                zoom: 8
+              });
+            }
+        </script>
+
+        <script src='asset/javascript/app.js'></script>
+        <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOBVpgk242X7hYUW0wFVhJaKFWgcImyjA&libraries=places"></script> -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOBVpgk242X7hYUW0wFVhJaKFWgcImyjA&libraries=places&callback=initMap"
+        async defer></script>
+    </body>
+
+</html>

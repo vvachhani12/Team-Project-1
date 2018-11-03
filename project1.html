@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./asset/css/project1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+  </head>
+
+  <body>
+    <!-------------- Nav bar to hold the Home and Favorite button ------------------>
+
+    <nav class="navbar" style="background-color: #2F4454">
+      <div class="col-sm-9"> </div>
+      <form class="form-inline col-sm-">
+        <a href ="./project1.html"><button class="btn btn-outline-success topRow" type="button">Home</button></a> 
+        <a href ="./favorites.html"><button class="btn btn-sm btn-outline-secondary topRow" type="button">My Favorites</button> </a>
+      </form>
+    </nav>
+
+    <!----------------------------- div for Images -------------------------------->
+      
+    <div class=" container w3-content w3-section imgDiv" style="max-width:100%">
+      <img class="mySlides" src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/one_pot_chorizo_and_15611_16x9.jpg" style="width:100%">
+      <img class="mySlides" src="https://i.kinja-img.com/gawker-media/image/upload/s--tH0aqmob--/c_fill,f_auto,fl_progressive,g_center,h_675,q_80,w_1200/u2nv6iy9y9ep2agd0dgo.gif" style ="width:100%">
+      <img class="mySlides" src="https://assets.bonappetit.com/photos/597f6564e85ce178131a6475/master/w_1200,c_limit/0817-murray-mancini-dried-tomato-pie.jpg" style="width:100% ">
+      <img class="mySlides" src=" http://static.jstv.com/img/2017/8/7/2017871502070263517_68.gif"  style="width:100%">
+      <img class="mySlides" src="https://lifeloveandgoodfood.com/wp-content/uploads/2016/09/Sticky-Chicken-Wings_IMG_9121.jpg" style="width:100% ">
+    </div>  
+
+    <!-------------------- Div for searching place by name or city ---------------------->
+
+    <div id="header">
+      <form>
+        <div class ="form-box">
+          <h1>Find <span>Your<span> Favorite</span> Foods!</span></h1>
+          <div id="searchDiv">
+            <input class="search-field skills" name="search" type="text" placeholder="Find Restaurant near you..." id="searchByName"/>
+            <input class="search-field location" name="location" type="text" placeholder="location" id="location"/>
+            <button class="search-btn" type="button" id="submitSearch">Search </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!----------------------- Div to hold the restaurante details ---------------------------->
+
+    <div class="menu-display">place holder text</div>
+
+    <!----------------------- Script for Carousel of food images in the backgroun ------------------->
+    <script>
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 2500); // Change image every 2 seconds
+        }
+
+        $(document).on("click", ".search-btn", function(){
+            $(".imgDiv").css("display", "none");
+            
+            $("#header").css("top", 0);
+            $(".menu-display").css("display", "block")
+        })        
+    </script>
+    
+    <script src='asset/javascript/app.js'></script>
+    <link rel="stylesheet" href="./asset/css/project1.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOBVpgk242X7hYUW0wFVhJaKFWgcImyjA&callback=initMapCord"
+    async defer></script>
+
+  </body>
+</html>
+      
